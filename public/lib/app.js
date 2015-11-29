@@ -25,7 +25,7 @@ app.controller('TodoController', ['$http', function ($http) {
         description: _this.newTodo.description,
         decision: _this.newTodo.decision,
         done: false
-      }
+      }//end todo
     }).then(function (response) {
       var todo = response.data;
       _this.todos.push(todo);
@@ -73,5 +73,7 @@ app.controller('TodoController', ['$http', function ($http) {
   };
 
   // Finally, the controller starts with the current todos prefetched
+
   this.getTodos();
 }]);
+//////////////////////////////////////////

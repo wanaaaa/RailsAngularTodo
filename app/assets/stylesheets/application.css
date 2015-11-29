@@ -17,3 +17,7 @@
 .done {
   text-decoration: line-through;
 }
+
+.teacherRed {
+	color: red;
+}
