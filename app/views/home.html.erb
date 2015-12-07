@@ -37,11 +37,12 @@
   <div class="col-sm-5 col-md-5">
     <div class="row">
 
-      <h3>Decide studendt's plan</h3>
+      <h3>Decide student's plan</h3>
       <ul ng-repeat="todo in ctrl.todos">
         <h4>student's Plan : {{todo.description }}</h4>
-        <h4 >Teacher's decision : </h4><form name="asdf" ng-submit="ctrl.updateTodoDecision(todo)">
-          <input type="text" placeholder="{{todo.decision}}" ng-model="ctrl.patchTodo.decision" >
+        <h4 >Teacher's decision : </h4>
+        <form name="asdf" ng-submit="ctrl.updateTodoDecision(todo)">
+          <input type="text" placeholder="{{todo.decision}}" ng-model="todo.decision" >
           <input type="submit">
         </form>
           <button ng-click="ctrl.destroyTodo(todo)">

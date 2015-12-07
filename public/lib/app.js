@@ -49,11 +49,14 @@ app.controller('TodoController', ['$http', function ($http) {
   };
 
   this.updateTodoDecision = function (todo) {
+    console.log("GARUMPH", todo);
+
       $http.patch('/todos/' + todo.id, {
         todo: {
-          decision: _this.patchTodo.decision
+          decision: todo.decision
         }
       }).then(function (response) {
+        console.log("PATCH RESPONSE BEEP BOOP:", response.data)
         var index = _this.todos.indexOf(todo);
         _this.todos[index].done = response.data.done;
       }, function (error) {
